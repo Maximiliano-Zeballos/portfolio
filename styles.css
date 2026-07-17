@@ -334,12 +334,26 @@ crystal-scene canvas {
   margin: 0 0 6px;
 }
 
+.timeline-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  margin-bottom: 12px;
+}
+
 .timeline-org {
   font-size: 13px;
   letter-spacing: .16em;
   text-transform: uppercase;
   color: #a78bfa;
-  margin-bottom: 12px;
+}
+
+.timeline-period {
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #7d6fa0;
 }
 
 .timeline-desc {
