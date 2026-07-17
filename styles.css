@@ -542,9 +542,161 @@ crystal-scene canvas {
   color: #665a88;
 }
 
+.cv {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 140px clamp(20px, 5vw, 40px) 80px;
+  box-sizing: border-box;
+}
+
+.cv-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1.05;
+  margin: 0 0 10px;
+}
+
+.cv-role {
+  font-size: 13px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #a78bfa;
+  margin-bottom: 16px;
+}
+
+.cv-meta {
+  font-size: 14px;
+  font-weight: 300;
+  color: #a79bc4;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.cv-section {
+  margin-top: 56px;
+}
+
+.cv-section .section-label {
+  margin-bottom: 28px;
+}
+
+.cv-summary {
+  font-size: 17px;
+  font-weight: 300;
+  color: #beb2d8;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 70ch;
+}
+
+.skill-group {
+  margin-bottom: 20px;
+}
+
+.skill-group-name {
+  font-size: 13px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #7d6fa0;
+  margin-bottom: 10px;
+}
+
+.cv-footer {
+  margin-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+}
+
+@media print {
+  body {
+    background: #fff;
+    color: #1c1626;
+    font-size: 12px;
+  }
+
+  .nav,
+  .cv-footer {
+    display: none;
+  }
+
+  .cv {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .cv-section {
+    margin-top: 28px;
+  }
+
+  .cv-name {
+    font-size: 30px;
+    color: #1c1626;
+  }
+
+  .cv-role,
+  .section-label,
+  .timeline-org {
+    color: #6d4fc4;
+  }
+
+  .cv-meta,
+  .timeline-period,
+  .skill-group-name {
+    color: #5a5470;
+  }
+
+  .cv-summary,
+  .timeline-desc {
+    color: #2a2438;
+    max-width: none;
+  }
+
+  .cv-meta a {
+    color: #6d4fc4;
+  }
+
+  .timeline-role {
+    font-size: 17px;
+    color: #1c1626;
+  }
+
+  .timeline-item {
+    padding-bottom: 18px;
+    break-inside: avoid;
+  }
+
+  .timeline-dot {
+    box-shadow: none;
+  }
+
+  .timeline-line {
+    background: #d8d2e8;
+  }
+
+  .tag {
+    color: #4a3f70;
+    border-color: #cfc8e0;
+    padding: 2px 9px;
+  }
+
+  .skill-group {
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+}
+
 @media (max-width: 640px) {
   .nav-links a {
     display: none;
+  }
+
+  .cv-page .nav-links a {
+    display: inline;
   }
 }
 
