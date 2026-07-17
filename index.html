@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maximiliano Zeballos · Full Stack Developer</title>
+<meta name="description" content="Full stack developer especializado en frontend web y mobile. React, React Native, Next.js, TypeScript, Node.js, NestJS, AWS.">
+<meta name="theme-color" content="#0a0714">
+<meta property="og:title" content="Maximiliano Zeballos · Full Stack Developer">
+<meta property="og:description" content="Construyo productos web y mobile para marcas globales y clientes propios.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 28 12 16 30 4 12Z' fill='%23a78bfa'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Outfit:wght@200..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<crystal-scene accent="#a78bfa" speed="0.2" particles="2500"></crystal-scene>
+
+<div class="content">
+
+  <nav class="nav">
+    <a href="#top" class="brand">MZ<span>.</span></a>
+    <div class="nav-links">
+      <a href="#sobre-mi" class="nav-link" data-i18n="navAbout">Sobre mí</a>
+      <a href="#proyectos" class="nav-link" data-i18n="navProjects">Proyectos</a>
+      <a href="#contacto" class="nav-link" data-i18n="navContact">Contacto</a>
+      <button id="lang-toggle" class="lang-btn" aria-label="Switch language">EN</button>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="eyebrow" data-i18n="heroEyebrow">Full Stack Developer · Frontend Web &amp; Mobile</div>
+    <h1 class="hero-title">Maximiliano <em>Zeballos</em></h1>
+    <p class="hero-sub" data-i18n="heroSub">Construyo productos web y mobile para marcas globales y clientes propios. Interfaces rápidas, código mantenible y experiencias que se sienten bien.</p>
+    <div class="hero-actions">
+      <a href="#proyectos" class="cta-primary" data-i18n="heroCta1">Ver proyectos</a>
+      <a href="#contacto" class="cta-secondary" data-i18n="heroCta2">Contactame</a>
+    </div>
+    <div class="scroll-hint">
+      <span data-i18n="scroll">Scroll</span>
+      <span class="line"></span>
+    </div>
+  </header>
+
+  <section id="sobre-mi" class="section about">
+    <div class="about-inner" data-reveal>
+      <div class="section-label" data-i18n="aboutTitle">Sobre mí</div>
+      <p class="about-lead" data-i18n="aboutBody">Soy desarrollador full stack especializado en frontend. Trabajo con React y React Native creando apps que se usan todos los días en múltiples mercados.</p>
+      <p class="about-text" data-i18n="aboutBody2">Me importa el detalle: el rendimiento, la arquitectura y esa sensación de que todo responde como debe. Del lado del servidor me muevo con Node.js y NestJS, y despliego con Docker y AWS.</p>
+    </div>
+  </section>
+
+  <section id="experiencia" class="section">
+    <div class="section-label" data-reveal data-i18n="expTitle">Trayectoria</div>
+    <div class="timeline">
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-rail">
+          <span class="timeline-dot"></span>
+          <span class="timeline-line"></span>
+        </div>
+        <div>
+          <h3 class="timeline-role" data-i18n="experience.0.role">Mobile Developer</h3>
+          <div class="timeline-org" data-i18n="experience.0.org">Marca global de consumo masivo</div>
+          <p class="timeline-desc" data-i18n="experience.0.desc">Desarrollo de la app móvil oficial de una marca FMCG global, usada en múltiples mercados. React Native, TypeScript, integración con APIs REST y pipelines de CI/CD.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-rail">
+          <span class="timeline-dot"></span>
+          <span class="timeline-line"></span>
+        </div>
+        <div>
+          <h3 class="timeline-role" data-i18n="experience.1.role">Mobile Developer</h3>
+          <div class="timeline-org" data-i18n="experience.1.org">Red internacional de viajes premium</div>
+          <p class="timeline-desc" data-i18n="experience.1.desc">Desarrollo mobile para una red internacional de agencias de viajes de lujo. React Native, TypeScript y servicios sobre AWS.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-rail">
+          <span class="timeline-dot"></span>
+          <span class="timeline-line"></span>
+        </div>
+        <div>
+          <h3 class="timeline-role" data-i18n="experience.2.role">Consultor independiente</h3>
+          <div class="timeline-org" data-i18n="experience.2.org">Clientes propios · Freelance</div>
+          <p class="timeline-desc" data-i18n="experience.2.desc">SPAs y sitios a medida para clientes propios: del diseño al deploy. React, Next.js, Node.js y NestJS.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" class="section">
+    <div class="section-label" data-reveal data-i18n="projTitle">Proyectos</div>
+    <div class="projects-grid">
+      <article class="project-card" data-reveal>
+        <div class="project-num">01</div>
+        <h3 class="project-name" data-i18n="projects.0.name">FMCG Mobile App</h3>
+        <p class="project-desc" data-i18n="projects.0.desc">App móvil para una marca global de consumo masivo, desplegada en múltiples mercados con foco en rendimiento y estabilidad.</p>
+        <div class="tags">
+          <span class="tag">React Native</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">CI/CD</span>
+        </div>
+      </article>
+      <article class="project-card" data-reveal>
+        <div class="project-num">02</div>
+        <h3 class="project-name" data-i18n="projects.1.name">Luxury Travel Platform</h3>
+        <p class="project-desc" data-i18n="projects.1.desc">Plataforma mobile para una red internacional de agencias de viajes premium, con experiencias de reserva de alto nivel.</p>
+        <div class="tags">
+          <span class="tag">React Native</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">AWS</span>
+        </div>
+      </article>
+      <article class="project-card" data-reveal>
+        <div class="project-num">03</div>
+        <h3 class="project-name" data-i18n="projects.2.name">Web Freelance</h3>
+        <p class="project-desc" data-i18n="projects.2.desc">SPAs y sitios para clientes propios como consultor independiente: producto completo, del frontend a la API.</p>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">NestJS</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="stack" class="section">
+    <div class="section-label" data-reveal data-i18n="stackTitle">Stack</div>
+    <div class="stack-list" data-reveal>
+      <span class="stack-chip">React</span>
+      <span class="stack-chip">React Native</span>
+      <span class="stack-chip">Next.js</span>
+      <span class="stack-chip">TypeScript</span>
+      <span class="stack-chip">Node.js</span>
+      <span class="stack-chip">NestJS</span>
+      <span class="stack-chip">Docker</span>
+      <span class="stack-chip">AWS</span>
+    </div>
+  </section>
+
+  <section id="contacto" class="section contact">
+    <div data-reveal>
+      <div class="section-label" data-i18n="contactTitle">Contacto</div>
+      <h2 class="contact-headline" data-i18n="contactHeadline">¿Trabajamos juntos?</h2>
+      <a href="mailto:maxi.zeballos97@gmail.com" class="email-link">maxi.zeballos97@gmail.com</a>
+      <div class="contact-links">
+        <a href="https://linkedin.com/in/maxi-zeballos" target="_blank" rel="noopener" class="contact-pill">LinkedIn</a>
+        <a href="https://github.com/maximiliano-zeballos" target="_blank" rel="noopener" class="contact-pill">GitHub</a>
+        <a href="#" class="cv-btn" data-i18n="cvBtn">Descargar CV</a>
+      </div>
+    </div>
+    <footer class="footer">
+      <span>© <span id="year">2026</span> Maximiliano Zeballos</span>
+      <span data-i18n="footerNote">Hecho con three.js</span>
+    </footer>
+  </section>
+
+</div>
+
+<script src="./scene.js" defer></script>
+<script src="./main.js" defer></script>
+</body>
+</html>
