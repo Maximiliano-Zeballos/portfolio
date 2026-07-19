@@ -542,6 +542,10 @@ crystal-scene canvas {
   color: #665a88;
 }
 
+.cv-page crystal-scene {
+  opacity: .55;
+}
+
 .cv {
   position: relative;
   z-index: 1;
@@ -549,6 +553,27 @@ crystal-scene canvas {
   margin: 0 auto;
   padding: 140px clamp(20px, 5vw, 40px) 80px;
   box-sizing: border-box;
+  perspective: 1400px;
+  perspective-origin: 50% 20%;
+}
+
+.cv-panel {
+  --depth: 0px;
+  opacity: 0;
+  transform: rotateX(-12deg) translateY(44px) translateZ(var(--depth));
+  background: rgba(16, 11, 30, .55);
+  border: 1px solid rgba(167, 139, 250, .14);
+  border-radius: 20px;
+  padding: 30px clamp(20px, 4vw, 38px);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  transition: transform .7s cubic-bezier(.2, .7, .2, 1), opacity .7s ease;
+  will-change: transform;
+}
+
+.cv-panel.is-in {
+  opacity: 1;
+  transform: rotateX(var(--tilt-y, 0deg)) rotateY(var(--tilt-x, 0deg)) translateZ(var(--depth));
 }
 
 .cv-name {
@@ -620,13 +645,26 @@ crystal-scene canvas {
   }
 
   .nav,
-  .cv-footer {
+  .cv-footer,
+  crystal-scene {
     display: none;
   }
 
   .cv {
     padding: 0;
     max-width: 100%;
+    perspective: none;
+  }
+
+  .cv-panel {
+    opacity: 1 !important;
+    transform: none !important;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .cv-section {

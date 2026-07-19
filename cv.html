@@ -9,10 +9,13 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 28 12 16 30 4 12Z' fill='%23a78bfa'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Outfit:wght@200..600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body class="cv-page">
+
+<crystal-scene accent="#a78bfa" speed="0.12" particles="1400"></crystal-scene>
 
 <nav class="nav">
   <a href="./index.html" class="brand">MZ<span>.</span></a>
@@ -25,7 +28,7 @@
 
 <main class="cv">
 
-  <header class="cv-header">
+  <header class="cv-header cv-panel">
     <h1 class="cv-name">Maximiliano Zeballos</h1>
     <div class="cv-role" data-i18n="cvRole">Full Stack Developer · Frontend Web & Mobile</div>
     <p class="cv-meta">
@@ -36,12 +39,12 @@
     </p>
   </header>
 
-  <section class="cv-section">
+  <section class="cv-section cv-panel">
     <div class="section-label" data-i18n="summaryTitle">Resumen</div>
     <p class="cv-summary" data-i18n="summaryBody">Desarrollador full stack con 8 años de experiencia, especializado en frontend web y mobile. Stack centrado en TypeScript: React y Next.js en web, React Native en mobile, Node.js con Express y NestJS en backend, con Docker, CI/CD y AWS en el día a día. Trabajé con equipos y clientes de Estados Unidos, España, Chile y Argentina, liderando equipos y como consultor de arquitectura frontend. Inglés profesional certificado (C1).</p>
   </section>
 
-  <section class="cv-section">
+  <section class="cv-section cv-panel">
     <div class="section-label" data-i18n="expTitle">Experiencia</div>
     <div class="timeline">
       <div class="timeline-item">
@@ -117,7 +120,7 @@
     </div>
   </section>
 
-  <section class="cv-section">
+  <section class="cv-section cv-panel">
     <div class="section-label">Skills</div>
     <div class="skill-group">
       <div class="skill-group-name" data-i18n="skillsLang">Lenguajes</div>
@@ -184,7 +187,7 @@
     </div>
   </section>
 
-  <section class="cv-section">
+  <section class="cv-section cv-panel">
     <div class="section-label" data-i18n="langTitle">Idiomas</div>
     <p class="cv-summary"><span data-i18n="langLine1">Español: nativo</span><br><span data-i18n="langLine2">Inglés: profesional completo, certificado EF SET C1</span></p>
   </section>
@@ -196,6 +199,7 @@
 
 </main>
 
+<script src="./scene.js" defer></script>
 <script src="./cv.js" defer></script>
 </body>
 </html>

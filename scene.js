@@ -188,6 +188,12 @@ customElements.define('crystal-scene', class extends HTMLElement {
 
   _startLoop() {
     const THREE = this._THREE;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      this._updateCamera(0);
+      this._updateObjects(0, 0);
+      this._renderer.render(this._scene, this._camera);
+      return;
+    }
     const clock = new THREE.Clock();
     const tick = () => {
       this._raf = requestAnimationFrame(tick);

@@ -90,3 +90,38 @@ langToggle.addEventListener('click', () => {
 });
 
 applyLang();
+
+const stage = document.querySelector('.cv');
+const panels = [...document.querySelectorAll('.cv-panel')];
+const depths = [36, 18, 0, -18, -32];
+panels.forEach((panel, i) => {
+  panel.style.setProperty('--depth', `${depths[i % depths.length]}px`);
+});
+
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (reducedMotion) {
+  panels.forEach((panel) => panel.classList.add('is-in'));
+} else {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px' });
+  panels.forEach((panel) => observer.observe(panel));
+
+  let tiltRaf = 0;
+  addEventListener('mousemove', (e) => {
+    if (tiltRaf) return;
+    tiltRaf = requestAnimationFrame(() => {
+      tiltRaf = 0;
+      const mx = (e.clientX / innerWidth) * 2 - 1;
+      const my = (e.clientY / innerHeight) * 2 - 1;
+      stage.style.setProperty('--tilt-x', `${(mx * 2.4).toFixed(2)}deg`);
+      stage.style.setProperty('--tilt-y', `${(my * -2).toFixed(2)}deg`);
+    });
+  }, { passive: true });
+}
